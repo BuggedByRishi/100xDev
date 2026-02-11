@@ -1,5 +1,5 @@
-const a = 1;                // a is a Variable
-console.log(a);           // Function
+let Firstname = "Rishi";
+let age = 21;
+let isMarried = false; 
 
-// let : When the value is changing
-// Defining the values that wont change
+console.log("This person's name is " + Firstname + " and their age is " + age + " and their marital status is " + isMarried);
