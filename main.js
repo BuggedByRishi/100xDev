@@ -1,10 +1,19 @@
-const ages = [32, 33, 16, 40];
-const numberofages = ages.length;
-
-for(let i = 0; i < numberofages; i   ++)
-{
-    if(ages[i] % 2 == 0)
+const allUser = [
     {
-        console.log(ages[i]);
+        name: "Rishi",
+        gender: "male"
+    },
+    {
+        name: "Riya",
+        gender: "female"
+    },
+    {
+        name: "Rohit",
+        gender: "male"
+    }]
+
+for(let i = 0; i < allUser.length; i++){
+    if(allUser[i]["gender"] == "male"){
+        console.log(allUser[i]["name"])
     }
 }
