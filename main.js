@@ -1,14 +1,13 @@
-function sum(num1, num2, fnToCall) {
-    let result = num1 + num2;
-    fnToCall(result);                           // This is a callback function that will be called with the result of the sum
+function calculateArithmetic(a, b, arithmeticFinalFunction)     // 2. arithmeticFinalFunction hold the function sum 
+{
+    const ans = arithmeticFinalFunction(a, b);              // 3. Stores the values in the variable and the Returns it to the next function
+    return ans;
 }
 
-function displayResult(data) {
-    console.log("The result of the sum is: " + data);
+function sum(a, b)
+{
+     return a + b;                          // 4. The Sum is being returned
 }
 
-function displayResultPassive(data) {
-    console.log("The sum's result is: " + data);
-}
-
-const ans = sum(5, 10, displayResult);          // Passed this function to the function sum, so that it can call it when it has the result of the sum. This is a callback function.
+const value = calculateArithmetic(1, 2, sum);           // 1. Passes the parameters and function "sum" to "calculateArithmetic" 
+console.log(value); 
