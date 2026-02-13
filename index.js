@@ -1,6 +1,6 @@
-function geetlength(str) {
-    console.log("Original string", str);
-    console.log("Length of the string", str.length);
+function getIndex(str){
+    console.log("original string", str);
+    console.log("Index is : ", str.indexOf('A'));
 }
 
-geetlength("IF YOU ARE READING THIS, IT'S ALREADY LATE");
+getIndex("IF YOU ARE READING THIS, YOU ARE TOO LATE");
