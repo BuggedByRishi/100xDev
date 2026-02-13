@@ -1,6 +1,6 @@
-function getIndex(str){
-    console.log("original string", str);
-    console.log("Index is : ", str.indexOf('A'));
+function getSlice(str, start, end) {
+    console.log("Original String : ", str);
+    console.log("The Index is : ", str.slice(start, end));
 }
 
-getIndex("IF YOU ARE READING THIS, YOU ARE TOO LATE");
+getSlice("IF YOU ARE READING THIS, YOU ARE LATE", 0, 23);
