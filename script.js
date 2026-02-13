@@ -1,18 +1,21 @@
-class Animal {
-    constructor(name,legCount, speaks) {
-        this.name = name;
-        this.legCount = legCount;
-        this.speaks = speaks;
-    }  
-    speak() {
-        console.log("Hi there " + this.speaks);
+const currentDate = new Date();
+
+console.log("Time in milliseconds since 1970 : ",currentDate.getTime()); 
+ 
+function calculateSum() {
+    let a = 0;
+    for (let i = 0; i < 100000; i++) {
+        a = a + i;                        // Just a loop to consume time
     }
+    return a;
 }
 
-let dog = new Animal("dog", 4, "Bhow Bhow");    // Create Objects
-let cat = new Animal("cat", 4, "Meow Meow");
-dog.speak();            // call function on object
-cat.speak();   
+const beforeDate = new Date();  
+const beforeTimeInMs = beforeDate.getTime();    
+calculateSum();
 
+const afterDate = new Date();  
+const afterTimeInMs = afterDate.getTime();  
+calculateSum();
 
-// Class, Objcet
+console.log(afterTimeInMs - beforeTimeInMs);
