@@ -1,9 +1,16 @@
-const arr = [1,2,3,4,5,6];
+function log1()
+{
+    console.log("Hello World");
+}
 
-arr.push(10);
-console.log(arr);
+function log2()
+{
+    console.log("Hello World 2");
+}
 
-const arr2 = [1,2,3,4,5,6];
+function logWhatsPresent(fn)
+{
+    fn();
+}
 
-arr2.pop();
-console.log(arr2);
+logWhatsPresent(log1);
