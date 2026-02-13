@@ -1,21 +1,7 @@
-const currentDate = new Date();
+const users = '{"name" : "Rishi", "age": 21, "gender":"male"}';
 
-console.log("Time in milliseconds since 1970 : ",currentDate.getTime()); 
- 
-function calculateSum() {
-    let a = 0;
-    for (let i = 0; i < 100000; i++) {
-        a = a + i;                        // Just a loop to consume time
-    }
-    return a;
-}
+// JSON.parse
+// JSON.stringify
 
-const beforeDate = new Date();  
-const beforeTimeInMs = beforeDate.getTime();    
-calculateSum();
-
-const afterDate = new Date();  
-const afterTimeInMs = afterDate.getTime();  
-calculateSum();
-
-console.log(afterTimeInMs - beforeTimeInMs);
+const user = JSON.parse(users)
+console.log(user["gender"]);
