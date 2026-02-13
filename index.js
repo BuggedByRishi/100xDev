@@ -1,4 +1,9 @@
-const value = "IF YOU ARE READING THIS, IT'S LATE";
-const words = value.split(" ");         // Returning the strings in the form of an array
+const arr = [1,2,3,4,5,6];
 
-console.log(words);
+arr.push(10);
+console.log(arr);
+
+const arr2 = [1,2,3,4,5,6];
+
+arr2.pop();
+console.log(arr2);
