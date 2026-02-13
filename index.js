@@ -1,6 +1,4 @@
-function getSlice(str, start, end) {
-    console.log("Original String : ", str);
-    console.log("The Index is : ", str.slice(start, end));
-}
+const name = "Hrishikesh Kakulte";
+let ans = name.slice(0, 6);
 
-getSlice("IF YOU ARE READING THIS, YOU ARE LATE", 0, 23);
+console.log(ans);
