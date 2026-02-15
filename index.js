@@ -1,16 +1,7 @@
-function log1()
-{
-    console.log("Hello World");
+let ans = 0; 
+
+for(let i = 1; i <= 50; i++) {
+    ans = ans + i;
 }
 
-function log2()
-{
-    console.log("Hello World 2");
-}
-
-function logWhatsPresent(fn)
-{
-    fn();
-}
-
-logWhatsPresent(log1);
+console.log(ans);
