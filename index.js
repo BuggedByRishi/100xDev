@@ -1,12 +1,19 @@
-function square(n) {
-    return n *n;
-}
+ function square(n) {
+    return n * n;
+ }
 
-function sumOfSquares(a, b) {
-    const value1 = square(a);
-    const value2 = square(b);
+ function cube(n) {
+    return n * n * n;
+ }
 
-    return value1 + value2;
-}
+ function sumOfSquare(a, b) {
+    let ans1 = square(a) + square(b);
+    return ans1;
+ }
 
-console.log(sumOfSquares(3, 4));
+ function sumOfCube(a, b) {
+    let ans2 = cube(a) + cube(b);
+    return ans2;
+ }
+
+ console.log(sumOfSquare(2, 3));
