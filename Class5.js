@@ -1,24 +1,8 @@
-function findSum(n){
-    let ans = 0;
-    for(let i = 0; i < n; i++) {
-        ans += i;
-    }
-    return ans;
-}
+const fs = require("fs");
+// filesystem module
 
-function findSumTill100() {
-    console.log(findSum(100));
-}
+fs.readFile("a.txt", "utf-8", function (err, data) {
+    console.log(data);
+})
 
-function syncSleep() {
-    let a = 1;
-    for(let i = 0; i < 1000; i++)
-    {
-        a++
-    }
-}
-
-syncSleep();
-findSumTill100();
-//setTimeout(findSumTill100, 1000);
-console.log("This will print before the sum is calculated");
+console.log("This is the end of the code");
