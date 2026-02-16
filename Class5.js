@@ -1,5 +1,7 @@
 let p = new Promise(function(resolve) {
-
+    resolve("Hi there");
 });
 
-console.log(p);
+p.then(function(){
+    console.log(p)
+})
