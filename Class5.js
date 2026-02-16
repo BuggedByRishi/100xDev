@@ -1,14 +1,12 @@
-const fs = require("fs");
-// filesystem module
+console.log("Hi there!");
 
-fs.readFile("a.txt", "utf-8", function (err, data) {    // Asynchronous Read file function (an expensive function as this takes time to read a file)
-    console.log(data);  
-})
+function calculateSum() {
+    let a = 0;
 
-console.log("Hi there");
-let a = 0;
-for(let i = 0; i < 100; i++) {
-    a++;
+    for (let i = 0; i < 5; i++) {
+        a = a + i;
+    }
+    console.log(a);
 }
 
-console.log("Bye there");
+calculateSum();
