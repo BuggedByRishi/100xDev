@@ -1,12 +1,5 @@
-var d = new Promise(function(resolve, reject) {
-    setTimeout(function() {
-        resolve("Foo");
-    }, 10000)
-})
+let p = new Promise(function(resolve) {
 
-function callback() {
-    console.log(d);
-}
+});
 
-console.log(d);
-d.then(callback);
+console.log(p);
