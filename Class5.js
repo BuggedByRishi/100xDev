@@ -1,13 +1,15 @@
-const fs = require('fs');
+const fs = require('fs');   // Using File system module to read and write files
 
-function rishiFile(cb) {                                            // Creating a Wrapper function 
-    fs.readFile("a.txt", "utf-8", function(err, data){              // JS provided Async function
-        cb(data);
-    });
+function rishiFile() {                                                   // Async functions
+    return new Promise(function(resolve) {
+        fs.readFile("a.txt", "utf-8", function(err, data) {
+            resolve(data);
+        })
+    })
 }
 
-function onDone(data) {
-    console.log(data);
+function onDone(data) {                 // Callback function to call the async function
+    console.log(data)
 }
 
-rishiFile(onDone);              // Clling rishiFile and passing onDone as a callback(cb) function to it.
+rishiFile().then(onDone);   // Calling the async function and then calling the callback function on completion
