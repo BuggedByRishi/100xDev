@@ -1,8 +1,12 @@
 console.log("Hi there!");
 
 setTimeout(function() {
-    console.log("From the inside Async function");
+    console.log("Kamla Bai");
 }, 2000);
+
+setTimeout(function() {
+    console.log("Ramu kaka");
+}, 1000);
 
     let a = 0;
 
