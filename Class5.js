@@ -1,19 +1,13 @@
-console.log("Hi there!");
+const fs = require('fs');
 
-setTimeout(function() {
-    console.log("Kamla Bai");
-}, 2000);
+function rishiFile(cb) {                                            // Creating a Wrapper function 
+    fs.readFile("a.txt", "utf-8", function(err, data){              // JS provided Async function
+        cb(data);
+    });
+}
 
-setTimeout(function() {
-    console.log("Ramu kaka");
-}, 1000);
+function onDone(data) {
+    console.log(data);
+}
 
-    let a = 0;
-
-    for (let i = 0; i < 5; i++) {
-        a = a + i;
-    }
-    console.log(a);
-
-
-console.log(a);
+rishiFile(onDone);              // Clling rishiFile and passing onDone as a callback(cb) function to it.
