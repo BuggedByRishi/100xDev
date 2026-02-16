@@ -5,4 +5,4 @@ fs.readFile("a.txt", "utf-8", function (err, data) {
     console.log(data);
 })
 
-console.log("This is the end of the code");
+console.log("Hi there");
