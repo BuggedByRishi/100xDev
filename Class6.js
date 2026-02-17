@@ -6,17 +6,12 @@
         return n * n * n;
     }
 
-    function sumOfSquares(a,b) {
-        let square1 = square(a);
-        let square2 = square(b);
+    // Generic function that takes a function as an argument
+    function sumOfSomething(a,b,fn) {       // Passing the function as an argument
+        let square1 = fn(a);
+        let square2 = fn(b);
         return square1 + square2;
     }
 
-    function sumOfSquares(a,b) {
-        let square1 = cube(a);
-        let square2 = cube(b);
-        return square1 + square2;
-    }
-
-    let ans = sumOfSquares(2, 3);
+    let ans = sumOfSomething(1, 2, square); 
     console.log(ans);
