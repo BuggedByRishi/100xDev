@@ -1,10 +1,10 @@
-function onDone() {
-    console.log("Hi there");    
+console.log("Hi");
+
+function onDone()
+{
+    console.log("Hello");
 }
 
 setTimeout(onDone, 1000);
-console.log("After SetTimeout");        
 
-for(let i = 0; i < 100; i++){
-    console.log("Hellows");
-}
+console.log("Hollas!");
