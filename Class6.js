@@ -1,11 +1,7 @@
-console.log("Hi there");
+function myOwnSetTimeout(fn, duration) {
+    setTimeout(fn, duration);
+}
 
-setTimeout(function(){
-    console.log("Inside the 1st Loop");
-
-    setTimeout(function(){
-        console.log("Inside the 2nd Loop");
-    },5000)
-},10000);
-
-console.log("Hollas!");
+myOwnSetTimeout(function() {
+    console.log("Hi there!");
+}, 1000)
