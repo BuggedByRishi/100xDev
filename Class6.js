@@ -3,14 +3,18 @@
 // want my work which async return 
 // some other sync task 
 
-function someSyncTask1() {
-    console.log("Some Sync Task 1");
+function Promisified(duration) {
+    const p = new Promise(function(resolve) {
+        setTimeout(resolve, duration);
+    })
+    return p
 }
-function someSyncTask2() {
-    console.log("Some Sync Task2");
-}
-setTimeout(function() {
-    someSyncTask2();
-},1000)
 
-someSyncTask1();
+// promise chaining
+
+Promisified(1000).then(function() {
+    console.log("First is done");
+    Promisified(1000).then(function() {
+        console.log("Secondone done");
+    });
+})
