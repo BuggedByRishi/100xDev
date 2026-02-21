@@ -1,14 +1,9 @@
-function myPromise(duration) {          
-    const p = new Promise(function(resolve) {               // Defining Asynchronous Function
-        setTimeout(function() {
-            resolve();
-        }, duration);
-    });
-    return p;
+function myOwnSetTimeout(fn, duration) {
+    setTimeout(fn, duration);
 }
 
-// Promise
-const ans = myPromise(1000);                    // Calling Asynchronous Function
-ans.then(function(){
-    console.log("Timeout is Done");
-});
+myOwnSetTimeout(function() {
+    console.log("done!");
+},1000)
+
+console.log("Hey there!");
