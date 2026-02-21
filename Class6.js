@@ -1,9 +1,14 @@
-// Create a function that logs something after 1s and waits for 2s and logs something other 
+function myPromise(duration) {          
+    const p = new Promise(function(resolve) {               // Defining Asynchronous Function
+        setTimeout(function() {
+            resolve();
+        }, duration);
+    });
+    return p;
+}
 
-setTimeout(function() {
-    console.log("Hi there!");
-    console.log("Waiting fot two Seconds");
-    setTimeout(function() {
-        console.log("Done!");
-    }, 2000)
-}, 1000)
+// Promise
+const ans = myPromise(1000);                    // Calling Asynchronous Function
+ans.then(function(){
+    console.log("Timeout is Done");
+});
