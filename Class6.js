@@ -1,20 +1,15 @@
-// async fn()
-// some sync task
-// want my work which async return 
-// some other sync task 
+let p = new Promise((resolve, reject) => {
+    let a = 1+2
+    if(a == 2){
+        resolve('Success')
+    }
+    else{
+        reject("Failed")
+    }
+})
 
-function Promisified(duration) {
-    const p = new Promise(function(resolve) {
-        setTimeout(resolve, duration);
-    })
-    return p
-}
-
-// promise chaining
-
-Promisified(1000).then(function() {
-    console.log("First is done");
-    Promisified(1000).then(function() {
-        console.log("Secondone done");
-    });
+p.then((message) => {
+    console.log("This is the ",message);
+}) .catch((message) => {
+    console.log("This is the ",message)
 })
