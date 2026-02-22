@@ -1,27 +1,19 @@
-const userLeft = false;
-const userWatchingCatMeme = false;
+const RecordingOne = new Promise((resolve, reject) => {
+    resolve('Video 1 Recorded')
+})
 
-function userPromise() {
-    return new Promise((resolve, reject) => {
-        if(userLeft){
-            reject({
-                name : 'User Left',
-                message : ':('
-            })
-        }
-        else if(userWatchingCatMeme){
-            reject({
-                name: 'User watching Cat Meme',
-                message: 'WebSimplified > Cat'
-            })
-        }else {
-            resolve('Thumps up and Subscribe')
-        }
-    })
-}
+const RecordingTwo = new Promise((resolve, reject) => {
+    resolve('Video 2 Recorded')
+})
+ 
+const RecordingThree = new Promise((resolve, reject) => {
+    resolve('Video 3 Recorded')
+})
 
-userPromise().then((message) => {
-    console.log('Success: ',message);
-}).catch((error) => {
-    console.log(error.name, '' , error.message)
+Promise.all([
+    RecordingOne,
+    RecordingTwo,
+    RecordingThree
+]).then((messages) => {
+    console.log(messages)
 })
